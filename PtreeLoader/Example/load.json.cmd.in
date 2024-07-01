@@ -8,14 +8,14 @@ fi
 : # - Windows (cmd)
 : # - Linux (shell)
 : #
-: # Loads example ptree file in XML format
+: # Loads example ptree file in JSON format
 : #-----------------------------------------------------------------------------
 
 : #-----------------------------------------------------------------------------
 : # Linux
 : #-----------------------------------------------------------------------------
-param='Ptrees/root.xml'
-cmd="${CMAKE_BINARY_DIR}/Ptree Loader/Example/PtreeLoader.exe"
+param='Ptrees/root.json'
+cmd="${CMAKE_BINARY_DIR}/PtreeLoader/Example/PtreeLoader"
 echo -------------------------------------------------------------
 echo Starting $cmd "$param"
 echo -------------------------------------------------------------
@@ -27,7 +27,7 @@ exit
 : #-----------------------------------------------------------------------------
 :WINDOWS
 
-set cmd="${CMAKE_BINARY_DIR}/Ptree Loader/Example/PtreeLoader.exe" "Ptrees/root.xml"
+set cmd="${CMAKE_BINARY_DIR}/PtreeLoader/Example/PtreeLoader.exe" "Ptrees/root.json"
 echo -------------------------------------------------------------
 echo Starting %cmd%
 echo -------------------------------------------------------------

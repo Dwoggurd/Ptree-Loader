@@ -10,7 +10,7 @@ if (MSVC)
   find_package(Boost REQUIRED)
 else()
   message("UNIX=${UNIX}")
-  find_package(Boost 1.70 REQUIRED COMPONENTS property_tree)
+  find_package(Boost 1.81)
 endif()
 
 # Example

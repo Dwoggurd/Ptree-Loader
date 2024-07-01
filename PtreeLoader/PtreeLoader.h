@@ -190,7 +190,7 @@ std::string PtreeLoader<T>::DumpPtree() const
 
     ss << delim << '\n';
     Writer( ss, root );
-    ss << '\n' << delim;
+    ss << '\n' << delim << '\n';
     return ss.str();
 }
 

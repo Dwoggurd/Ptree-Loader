@@ -15,7 +15,7 @@ fi
 : # Linux
 : #-----------------------------------------------------------------------------
 param='Ptrees/root.info'
-cmd="${CMAKE_BINARY_DIR}/Ptree Loader/Example/PtreeLoader.exe"
+cmd="${CMAKE_BINARY_DIR}/PtreeLoader/Example/PtreeLoader"
 echo -------------------------------------------------------------
 echo Starting $cmd "$param"
 echo -------------------------------------------------------------
@@ -27,7 +27,7 @@ exit
 : #-----------------------------------------------------------------------------
 :WINDOWS
 
-set cmd="${CMAKE_BINARY_DIR}/Ptree Loader/Example/PtreeLoader.exe" "Ptrees/root.info"
+set cmd="${CMAKE_BINARY_DIR}/PtreeLoader/Example/PtreeLoader.exe" "Ptrees/root.info"
 echo -------------------------------------------------------------
 echo Starting %cmd%
 echo -------------------------------------------------------------
