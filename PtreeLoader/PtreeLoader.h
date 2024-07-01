@@ -136,15 +136,13 @@ void PtreeLoader<T>::Load( const fs::path &fsPath, const fs::path &fsParentPath 
     // Merge children from subtree into root tree at ptPath
     for ( const auto &kv : subtree )
     {
+        // Add duplicate keys, don't replace.
+        root.add_child( kv.first, kv.second );
+
         if ( kv.first == includeKey )
         {
             // Handle IncludeFile
-            root.add_child( kv.first, kv.second );
             Load( kv.second.data(), fsEffectivePath.parent_path() );
-        }
-        else
-        {
-            root.put_child( kv.first, kv.second );
         }
     }
 }

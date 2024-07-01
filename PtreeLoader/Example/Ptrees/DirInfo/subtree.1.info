@@ -10,4 +10,5 @@ Colors
     color1 red
     color2 blue
 }
-
+duplicateKey 1
+duplicateKey 2

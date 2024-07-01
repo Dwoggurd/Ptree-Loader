@@ -6,6 +6,7 @@
 
 IncludeFile ../DirInfo/subtree.5.info
 
+duplicateKey 4
 Names
 {
     name1 Peter
