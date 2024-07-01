@@ -1,9 +1,9 @@
 # Ptree Loader
-An utility class that enables loading [Boost.PropertyTree](https://www.boost.org/doc/libs/1_85_0/doc/html/property_tree.html) with support for "include" directives.
+An utility class that enables loading [Boost.PropertyTree](https://www.boost.org/doc/libs/1_85_0/doc/html/property_tree.html) with support for "include" directives.  
 This is a header-only class.
 
 ## What it does
-__Boost.PropertyTree__ supports four file formats for loading values: XML/JSON/INI/INFO
+__Boost.PropertyTree__ supports four file formats for loading values: XML/JSON/INI/INFO  
 ([How to Populate a Property Tree](https://www.boost.org/doc/libs/1_85_0/doc/html/property_tree/parsers.html)).
 However, only one of those formats (INFO) supports "include" directive functionality natively and it is also limited to absolute paths.
 This class enhances support for "include" functionality and allows to use it with several file formats (XML/JSON/INFO).
@@ -77,7 +77,7 @@ Data
 }
 ```
 
-More examples: [Example](Ptree Loader/Example)
+More examples: [Example](Ptree%20Loader/Example)
 
 ##
 Dwoggurd (2024)
