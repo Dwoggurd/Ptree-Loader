@@ -77,7 +77,7 @@ Data
 }
 ```
 
-More examples: [Example](Ptree%20Loader/Example)
+More examples: [Example](PtreeLoader/Example)
 
 ##
 Dwoggurd (2024)
