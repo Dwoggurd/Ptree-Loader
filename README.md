@@ -34,7 +34,7 @@ Advantages:
 - round-trips
 
 Create PtreeLoader object for desired format with ptree to load into, then call Load() method.
-```
+```cpp
 #include "PtreeLoader.h"
 
 // Create ptree
