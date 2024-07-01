@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IncludeFile>DirXml/subtree.1.xml</IncludeFile>
+<Data>
+    <field1>100</field1>
+    <field2>200</field2>
+</Data>

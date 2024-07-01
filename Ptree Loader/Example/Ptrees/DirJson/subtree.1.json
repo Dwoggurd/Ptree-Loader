@@ -1,0 +1,7 @@
+{
+    "IncludeFile": "..\/DirJson\/subtree.2.json",
+    "Colors": {
+        "color1": "red",
+        "color2": "blue"
+    }
+}

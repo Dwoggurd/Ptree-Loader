@@ -1,0 +1,15 @@
+; ------------------------------------------------------------------------------
+; PtreeLoader example
+; ------------------------------------------------------------------------------
+; Root ptree in INFO format
+; ------------------------------------------------------------------------------
+
+IncludeFile DirInfo/subtree.1.info
+IncludeFile DirInfo/subtree.2.info
+IncludeFile ./DirInfo/../DirInfo/subtree.3.info
+
+Data bigData
+{
+    field1 100
+    field2 200
+}

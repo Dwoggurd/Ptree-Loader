@@ -1,0 +1,7 @@
+{
+    "IncludeFile": "DirJson\/subtree.1.json",
+    "Data": {
+        "field1": 100,
+        "field2": 200
+    }
+}
