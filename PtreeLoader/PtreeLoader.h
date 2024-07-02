@@ -55,7 +55,7 @@ class PtreeLoader
 public:
     /// Constructs PtreeLoader
     /// @param root ptree to load into
-    explicit PtreeLoader( bpt::ptree &root ) : root( root ) {}
+    explicit PtreeLoader( bpt::ptree& root ) : root( root ) {}
     PtreeLoader( const PtreeLoader& )             = delete;
     PtreeLoader& operator=( const PtreeLoader& )  = delete;
     PtreeLoader( PtreeLoader&& )                  = delete;
@@ -64,7 +64,7 @@ public:
 
     /// Load ptree from file
     /// @param fsPath Absolute or relative file path
-    void Load( const fs::path &fsPath );
+    void Load( const fs::path& fsPath );
 
     /// Dump diagnostic
     std::string DumpDiag() const;
@@ -73,9 +73,9 @@ public:
     std::string DumpPtree() const;
 
 private:
-    void Load( const fs::path &fsPath, const fs::path &fsParentPath );
-    void Reader( const std::string &fname, bpt::ptree &pt );
-    void Writer( std::ostream &stream, const bpt::ptree &pt ) const;
+    void Load( const fs::path& fsPath, const fs::path& fsParentPath );
+    void Reader( const std::string& fname, bpt::ptree& pt );
+    void Writer( std::ostream& stream, const bpt::ptree& pt ) const;
 
 private:
     /// Special key that represents include file
@@ -84,7 +84,7 @@ private:
     /// Recursive include loop detector
     static constexpr const int depthLimit{ 20 };
 
-    bpt::ptree         &root;
+    bpt::ptree&        root;
     std::stringstream  diagnostic;
     int                depth;
 };
@@ -93,7 +93,7 @@ private:
 // PtreeLoader definition
 // -----------------------------------------------------------------------------
 template<PtreeFileFormat T>
-void PtreeLoader<T>::Load( const fs::path &fsPath )
+void PtreeLoader<T>::Load( const fs::path& fsPath )
 {
     depth = 0;
     Load( fsPath, fsPath.is_relative() ? fs::current_path() : "" );
@@ -101,7 +101,7 @@ void PtreeLoader<T>::Load( const fs::path &fsPath )
 
 // -----------------------------------------------------------------------------
 template<PtreeFileFormat T>
-void PtreeLoader<T>::Load( const fs::path &fsPath, const fs::path &fsParentPath )
+void PtreeLoader<T>::Load( const fs::path& fsPath, const fs::path& fsParentPath )
 {
     if ( ++depth > depthLimit )
     {
@@ -134,7 +134,7 @@ void PtreeLoader<T>::Load( const fs::path &fsPath, const fs::path &fsParentPath 
     }
 
     // Merge children from subtree into root tree at ptPath
-    for ( const auto &kv : subtree )
+    for ( const auto& kv : subtree )
     {
         // Add duplicate keys, don't replace.
         root.add_child( kv.first, kv.second );
@@ -151,13 +151,13 @@ void PtreeLoader<T>::Load( const fs::path &fsPath, const fs::path &fsParentPath 
 #define PTREE_PARSER( FF )                                                                        \
                                                                                                   \
 template<>                                                                                        \
-void PtreeLoader<PtreeFileFormat::FF>::Reader( const std::string &fname, bpt::ptree &pt )         \
+void PtreeLoader<PtreeFileFormat::FF>::Reader( const std::string& fname, bpt::ptree& pt )         \
 {                                                                                                 \
     bpt::FF ## _parser::read_ ## FF( fname, pt );                                                 \
 }                                                                                                 \
                                                                                                   \
 template<>                                                                                        \
-void PtreeLoader<PtreeFileFormat::FF>::Writer( std::ostream &stream, const bpt::ptree &pt ) const \
+void PtreeLoader<PtreeFileFormat::FF>::Writer( std::ostream& stream, const bpt::ptree& pt ) const \
 {                                                                                                 \
     bpt::FF ## _parser::write_ ## FF( stream, pt );                                               \
 }
