@@ -15,7 +15,7 @@ fi
 : # Linux
 : #-----------------------------------------------------------------------------
 args='Ptrees/root.xml'
-cmd="${CMAKE_BINARY_DIR}/PtreeLoader/Example/PtreeLoader"
+cmd="${CMAKE_BINARY_DIR}/Example/PtreeLoader"
 echo --------------------------------------------------------------------------------
 echo Starting $cmd "$args"
 echo --------------------------------------------------------------------------------
